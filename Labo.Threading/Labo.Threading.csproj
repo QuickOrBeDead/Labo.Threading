@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Labo.Threading</RootNamespace>
+    <AssemblyName>Labo.Threading</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Common.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Labo.Threading.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Common.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Labo.Threading.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Labo.Common, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Labo.Commons.1.0.1\lib\net45\Labo.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionWorkItem.cs" />
+    <Compile Include="EventArg\WorkerThreadExceptionEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadExitingEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolEnqueuedNewWorkItemEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolEnqueuingNewWorkItemEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolMaximumWorkerThreadsCountChangedEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolMinimumWorkerThreadsCountChangedEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolShuttingdownEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolStartingNewWorkerThreadEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolStartingOptimumNumberOfThreadsEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolTryingToStartNewWorkerThreadsEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadPoolWaitingForWorkItemsToShutDownEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadWorkItemExceptionEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadWorkItemFinishedEventArgs.cs" />
+    <Compile Include="EventArg\WorkerThreadWorkItemStartingEventArgs.cs" />
+    <Compile Include="Exceptions\LaboThreadingException.cs" />
+    <Compile Include="IWorkerThreadManager.cs" />
+    <Compile Include="IWorkerThreadPool.cs" />
+    <Compile Include="IWorkItem.cs" />
+    <Compile Include="IWorkItemQueue.cs" />
+    <Compile Include="IWorkItemWaiterEntry.cs" />
+    <Compile Include="IWorkItemWaiterEntryStack.cs" />
+    <Compile Include="WorkerThread.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkerThreadExitReason.cs" />
+    <Compile Include="WorkerThreadPool.cs" />
+    <Compile Include="WorkItemBase.cs" />
+    <Compile Include="WorkItemQueue.cs" />
+    <Compile Include="WorkItemState.cs" />
+    <Compile Include="WorkItemWaiterEntry.cs" />
+    <Compile Include="WorkItemWaiterEntryStack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common.ruleset" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

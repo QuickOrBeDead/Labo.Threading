@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labo.Threading", "Labo.Threading\Labo.Threading.csproj", "{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labo.Threading.Tests", "Labo.Threading.Tests\Labo.Threading.Tests.csproj", "{7A1B55F1-031A-425B-B09B-4FED29223166}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFCE6C3-3BBD-4346-8602-3086406D7DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1B55F1-031A-425B-B09B-4FED29223166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1B55F1-031A-425B-B09B-4FED29223166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1B55F1-031A-425B-B09B-4FED29223166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1B55F1-031A-425B-B09B-4FED29223166}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
